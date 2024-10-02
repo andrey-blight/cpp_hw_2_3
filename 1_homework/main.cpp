@@ -32,8 +32,8 @@ class NumberOp : public Statement {
 std::vector<std::shared_ptr<Statement>> compile(std::string_view str) {
     std::vector<std::shared_ptr<Statement>> statements{};
     if (str == "+") {
-        BinaryOp<std::plus<int>{}> op{};
-        statements.push_back(std::shared_ptr<Statement>{&op});
+        auto op = std::make_shared<BinaryOp<std::plus<int>{}>>();
+        statements.push_back(op);
     }
 
     return statements;
@@ -41,6 +41,7 @@ std::vector<std::shared_ptr<Statement>> compile(std::string_view str) {
 
 int main() {
     for (auto &el: compile("+")) {
-        std::cout << el->is_pure() << " " << el->get_arguments_count() << " " << el->get_results_count() << " ";
+        std::cout << el->is_pure() << " " << el->get_arguments_count() << " " << el->get_results_count() << " "
+                  << el->apply({1, 2})[0] << std::endl;
     }
 }
