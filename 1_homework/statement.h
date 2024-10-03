@@ -32,10 +32,9 @@ protected:
 };
 
 //std::shared_ptr<Statement> operator|(std::shared_ptr<Statement> lhs, std::shared_ptr<Statement> rhs);
-//
-//std::shared_ptr<Statement> compile(std::string_view str);
-std::vector<std::shared_ptr<Statement> > compile(std::string_view str);
-//
+
+std::shared_ptr<Statement> compile(std::string_view str);
+
 //std::shared_ptr<Statement> optimize(std::shared_ptr<Statement> stmt);
 
 #endif //CPP_STATEMENT_H
