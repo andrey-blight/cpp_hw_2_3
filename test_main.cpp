@@ -5,6 +5,7 @@
 #include <fstream>
 #include <array>
 #include <utility>
+#include <algorithm>
 
 using namespace std;
 static constexpr size_t N = 36, M = 84;
