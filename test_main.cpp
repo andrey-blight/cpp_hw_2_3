@@ -7,6 +7,7 @@
 #include <utility>
 #include <unordered_map>
 #include <string>
+#include <cstring>
 #include <algorithm>
 
 using namespace std;
