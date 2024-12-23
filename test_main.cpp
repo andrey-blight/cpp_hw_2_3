@@ -5,6 +5,8 @@
 #include <fstream>
 #include <array>
 #include <utility>
+#include <unordered_map>
+#include <string>
 #include <algorithm>
 
 using namespace std;
