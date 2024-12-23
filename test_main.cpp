@@ -3,6 +3,8 @@
 #include <random>
 #include <regex>
 #include <fstream>
+#include <array>
+#include <utility>
 
 using namespace std;
 static constexpr size_t N = 36, M = 84;
